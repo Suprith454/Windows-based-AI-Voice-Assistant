@@ -1,0 +1,14 @@
+# Virtual environment
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Installer / wheel files
+*.whl
+
+# OS files
+.DS_Store
+Thumbs.db
+
