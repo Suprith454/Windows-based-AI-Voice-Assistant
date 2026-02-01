@@ -1,108 +1,56 @@
-## Windows AI Voice Assistant (Python)
+Windows AI Voice Assistant (Python)
 
-A native **Windows-based AI Voice Assistant** built using Python.  
-It listens to voice commands, performs system-level actions, and responds using offline text-to-speech.
+This project implements a voice assistant on Windows using Python.
 
----------------------------------------------------------------------------------------
+Structure:
 
-## Features
--  Voice command recognition
--  Offline text-to-speech (no internet needed for speaking)
--  Open Windows applications (Notepad, Calculator, Chrome)
--  Tell current time
--  Wake-word based activation
--  Modular and scalable architecture
+```
+|-- speech/          # Microphone input and TTS
+  |-- listen.py      # Speech-to-text
+  |-- speak.py       # Text-to-speech
+|-- skills/          # Task execution
+  |-- router.py      # Command routing
+  |-- open_apps.py   # Opens applications
+  |-- time_date.py   # Provides time and date
+|-- requirements.txt
+|-- README.md
+```
 
----------------------------------------------------------------------------------------
+Installation:
 
-## Tech Stack
-- **Python 3.11**
-- **SpeechRecognition**
-- **PyAudio**
-- **pyttsx3**
-- Windows OS
-
----------------------------------------------------------------------------------------
-
-## Project Structure
-
-AI_Assistant/
-│
-|── assistant.py
-│
-|── speech/
-│ |── listen.py
-│ |── speak.py
-│
-|── skills/
-│ |── router.py
-│ |── open_apps.py
-│ |── time_date.py
-│
-|── requirements.txt
-|── README.md
-
----------------------------------------------------------------------------------------
-
-## Installation & Setup (Windows)
-
+```bash
 python -m venv venv
 venv\Scripts\activate
-
 pip install -r requirements.txt
+```
 
----------------------------------------------------------------------------------------
+Usage:
 
-## Clone the repository
-```bash
-git clone https://github.com/your-username/AI_Assistant.git
-cd AI_Assistant
+1.  Clone the repository:
 
----------------------------------------------------------------------------------------
+    ```bash
+    git clone https://github.com/Suprith454/AI-Assistance.git
+    cd AI_Assistant
+    ```
+2.  Run:
 
-## Clone the repository
+    ```bash
+    python assistant.py
+    ```
 
-python assistant.py
+Functionality:
 
----------------------------------------------------------------------------------------
+The assistant captures voice input, converts it to text, routes the command, executes system tasks, and responds using offline TTS.
 
-## How It Works
+Applications:
 
-- Captures voice input via microphone
+-   AI/Python learning project
+-   Voice automation demonstration
 
-- Converts speech to text
+Planned Features:
 
-- Matches command using a router module
-
-- Executes system-level tasks
-
-- Responds using offline TTS
-
----------------------------------------------------------------------------------------
-
-## Use Cases
-
-- AI / Python learning project
-
-- Voice automation demo
-
----------------------------------------------------------------------------------------
-
-## Future Enhancements
-
-- ChatGPT / LLM integration
-
-- Desktop GUI (Tkinter)
-
-- Email automation
-
-- File search
-
-- Memory & personalization
-
----------------------------------------------------------------------------------------
-
-## Author
-
-Suprith M
-Artificial Intelligence & Data Science Student
+*   ChatGPT/LLM integration
+*   Desktop GUI (Tkinter)
+*   Email automation
+*   File search
+*   Memory & personalization
